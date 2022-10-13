@@ -1,0 +1,13 @@
+Comandos! 
+
+1 - npm i -> Instalar as dependencias.
+Para da start para iniciar na web, tem que executar.
+
+2 - Para que fique os arquivos Startaveis no Scripts no package.json
+coloca-se assim.
+"scripts": {
+		"exercicios": "http-server ./exercicios -c-1",
+		"qrcode": "http-server ./qrcode -c-1",
+		"sales": "http-server ./sales -c-1".
+
+3 - Para da start é só -> npm run exercicios, ou só muda o final.

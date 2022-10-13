@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicando Estilo</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+    <style>
+        .vermelho {
+            background-color: red;
+        }
+    </style>
+</head>
+<body class="exercicio"> <!-- @click="aplicarCor = !aplicarCor" -> vai ser um click caso for clicado vai vim a cor e depois que clica vai vim outra. -->
+    <div id="app" @click="aplicarCor = !aplicarCor" 
+    :class="{vermelho: aplicarCor}"> <!-- ":class" -> para selecionar uma class no CSS -->
+    <!--E APONTANDO PARA A CLASS DA COR ONDE O CLICK VAI ATIVAR E DEPOIS DESATIVA.-->
+        Teste
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: { // Uma função no Vue para aplicar a cor e retira com o Mouse
+                aplicarCor: false
+            }
+        })
+    </script>
+</body>
+</html>

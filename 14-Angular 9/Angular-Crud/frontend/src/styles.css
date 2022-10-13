@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.red {
+    color: #ce1f30;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+/*CSS para as mensagens que que vai aparecer quando a mensagem for um sucesso.*/
+.msg-success {
+    background-color: #2797e2;
+    color: #fff;
+}
+
+.msg-error {
+    background-color: #9727e2;
+    color: #fff;    
+}

@@ -1,0 +1,29 @@
+Fundamentos do FrameWork.
+
+Um projeto que e feito com Javascritp e JSX.
+
+Oque é Nextjs ? -> Nextjs é a biblioteca mais famosa do FrontEnd do mundo.
+
+1 - mkdir -> para criar uma pastar.
+
+2 - Criar o projeto para os fundamentos usando o comando -> npx create-next-app -> e o nome que voce vai querer no projeto.
+
+3 - Para da start no projeto é com o comando -> npm run dev
+
+
+Para Criar uma URL dentro do React voce precisa criar uma PASTAR CHAMADE DE "pages" isso já criar uma url e se voce for criando mas pastas,
+vai sim criando mais urls
+
+Para mecher em API's tem que baixar o PostMan. 
+
+//////////////////////////////////////////////////////////
+
+No Arquivo estatico.jsx para que o numero se torne estatico o numero que é gerado randomico,
+precisa gerar uma build com o comando abaixo.
+
+Ler -> https://nextjs.org/docs/basic-features/pages
+
+1 - npm run build -> assim vai ser gerado um build.
+
+2 - npm start -> assim esse start vai gera um numero permanente que só vai ser gerado uma vez. caso queira fica atualizando o 
+Build ai sim ele vai gera numero, em quanto tempo voce quiser.

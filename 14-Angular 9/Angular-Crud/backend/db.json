@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": "8.80"
+    },
+    {
+      "id": 3,
+      "name": "Sansung S20 + Ultra",
+      "price": "7520.89"
+    },
+    {
+      "name": "Lapis Preto Básico",
+      "price": "4.00",
+      "id": 4
+    },
+    {
+      "name": "Caneta BIC Vermelha",
+      "price": "5.89",
+      "id": 5
+    },
+    {
+      "name": "Quero Piroka",
+      "price": "5.000",
+      "id": 6
+    },
+    {
+      "name": "Gleibinho",
+      "price": "70000",
+      "id": 8
+    },
+    {
+      "name": "Bolsonaro",
+      "price": "22",
+      "id": 9
+    },
+    {
+      "name": "Lula",
+      "price": "13",
+      "id": 10
+    }
+  ]
+}

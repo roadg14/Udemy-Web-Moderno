@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ contador }}</p>
+        <p>
+            <button v-on:click="add">+1</button> <!-- Fazendo uma soma com a função add que foi criada em methods. -->
+            <button @click="contador -= 1">-1</button> <!-- O "@click" é a mesma função do v-on:, e mostrando que dentro tambem pode fazer uma subtração. "Contador -= 1" -->
+        </p>
+        <p @mousemove="atualizarPosicao">
+            Coordenadas: {{x}} e {{y}}
+            <span @mousemove.stop>Para Aqui!</span> <!-- Fazendo o mousemove, para quando passar por cima do nome. usando o ".stop" -->
+        </p>
+        <input type="text" @keyup.enter="alerta"> <!-- Um bom indicador para evento alerta, que quando for clicado em Enter e ele mostrar o alerta.-->
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                x: 0,
+                y: 0,
+                contador: 0
+            },
+            methods: {
+                add() {
+                    this.contador++
+                },
+                atualizarPosicao(e) { // Esta ligado ao @mousemove tanto com a data: { x: 0, y:0} 
+                    this.x = e.clientX
+                    this.y = e.clientY
+                },
+                alerta() {
+                    alert('Erro!')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

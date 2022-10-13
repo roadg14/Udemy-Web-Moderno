@@ -1,0 +1,35 @@
+Comandos!
+
+Video da instalação -> https://www.youtube.com/watch?v=laLWx2bMWcg
+
+1 - Instalar o Banco MySQL - MySQL Installer 8.0.30 o primeiro para instalar. -> https://dev.mysql.com/downloads/installer/
+
+2 - Senha para colocar no MySQL -> 86711977 -> Minha senha
+
+3 - Resolvendo o problema de status no MySQL -> https://www.youtube.com/watch?v=4CfOkEcU2fM
+
+Observação: Apois instalar o servidor MySQL e a ferramenta grafica MySQLBrench.
+Agora podemos Manipular os bancos, Criar Tabelas, e OUTROS Esquemas.
+
+///////////////////////////////////////////////////////////////////////////////////
+
+SQL! -> OQUE SÃO USADOS NO SQL.
+
+DML Manipulação de dados -> INSERT - SELECT - UPDATE - DELETE. -> CRUD.
+
+DDL Definição de dados -> CREATE - ALTER - DROP.
+
+DCL Permissões e controle de acesso aos objetos de dados ->  GRANT - DENY - REVOLKE.
+
+TCL Transações de dados -> BEGIN TRANS - COMMINT TRANS - ROLLBACK.
+
+DQL
+
+/////////////////////////////////////////////////////////////////////////////////////
+Pelo Terminal para criar um Schema!
+1 - Acessar -> mysql -u root -p
+2 - Criar -> create schema 'nome do schema';
+3 - Usar o Banco -> use 'e o nome do banco';
+
+Plugins no VSCODE -> vscode-database
+Apois instalar esse plugin usar os comandos -> Ctrl + Shift + P -> mysql -> Abrir o Connect to SQL server / e colocar a senha do banco mySQL.

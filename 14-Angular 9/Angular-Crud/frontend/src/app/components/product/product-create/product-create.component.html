@@ -1,0 +1,23 @@
+ <!-- Para puxa o e fazer um binding de atributo no id tem que coloca assim '[id]' -->
+<mat-card>
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <!-- Quando for criado novo ele vai usar essa configuração e enviar para o backend. bd.json -->
+            <input matInput placeholder="Nome" 
+                [(ngModel)]="product.name" name="name"> <!-- Aqui vai criar o novo produto -->
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" 
+                [(ngModel)]="product.price" name="price">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createProduct()" color="primary">
+        Atualizar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()" color="primary">
+        Cancelar
+    </button>
+</mat-card>
+<!-- <button (click)="fazerAlgo()">Fazer Algo!</button> Paara fazer com que um evento de click aconteça tem que coloca entre ASPAS ()-->

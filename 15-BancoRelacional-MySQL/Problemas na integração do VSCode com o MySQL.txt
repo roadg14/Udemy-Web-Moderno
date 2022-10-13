@@ -1,0 +1,154 @@
+Problemas na integração do VSCode com o MySQL
+Fala, Pessoal!
+
+Notamos alguns problemas recorrentes devido à instalação do MySQL e esta aula-artigo busca abordar os mais recorrentes e te orientar como solucioná-los.
+
+
+
+Problema #01: "Comando "mysql" não funciona no Prompt de Comando.."
+
+Solução: Adicionar a pasta "bin" do MySQL às variáveis de ambiente (PATH)
+
+Digitar Editar as variáveis de ambiente do sistema na sua barra de pesquisa do Windows;
+
+Clicar na opção Variáveis de Ambiente;
+
+Na caixa de baixo (Variáveis do sistema) você vai procurar a opção Path e selecionar;
+
+Com a opção selecionada, clique em Editar;
+
+Vai abrir outra aba. Caso você não veja o path do MySQL nela, você vai clicar em Novo;
+
+Agora é possível adicionar variáveis de ambiente em Path;
+
+É necessário então colocar o caminho de instalação do Mongo (vai ser algo mais ou menos assim:
+
+C:\\Program Files\\MySQL\\MYSQL Server <número da versão>\\bin
+Substitua <número da versão> pela versão que está instalada na sua máquina; atualmente contamos com a versão 8.0 então ficaria algo assim:
+
+C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin
+Clique em Ok;
+
+Em seguida, feche todos os seus terminais que estão abertos;
+
+Abra novamente e tente digitar mysql ****mais uma vez
+
+
+
+Problema #02: "Não consigo conexão com o MySQL no VSCode"
+
+Solução: Verificar se o banco e o servidor estão corretamente conectados
+
+Na aba do Visual Studio Code, após conectar usando a extensão vscode-database e abrir a aba de comandos com Ctrl + Shift + P, selecionando "Connect to MySQL Server" você verá a seguinte página:
+
+
+No canto inferior esquerdo, é possível ver a mensagem "Server not selected", já que realmente não foi feita a conexão com o banco.
+
+Verifique se os dados do seu banco estão corretos, o nome do Host, username e senha (caso tenha sido cadastrada). Se não tiver uma senha cadastrada, pode clicar em Connect sem digitar a senha; caso contrário, o VSCode exibirá uma mensagem de erro pois não consegue conectar com as diretrizes especificadas, já que não há uma senha cadastrada. O passo a passo de como cadastrar uma senha é mostrado mais à frente e, caso o siga, você pode então usar sua senha recém cadastrada também aqui.
+
+
+Verificadas as diretrizes então, é só clicar em Connect. Agora é possível verificar que, na barra roxa, ele mostra o host conectado (root@localhost (MySql)) mas, ao lado, exibe a mensagem "Database not selected"
+
+
+Para corrigir isso é simples, basta clicar em "Database Not Selected" e uma aba com as opções de bancos de dados vai surgir. Daí, basta clicar no banco de dados que você quer usar.
+
+
+
+Problema #03: "Problemas com a senha do banco de dados"
+
+Solução: Criar um novo usuário ou alterar o usuário existente
+
+
+
+Para criar um novo usuário:
+
+Primeiramente, vamos acessar o MySql. Abra uma janela do Prompt de Comando e digite:
+
+mysql -u root -p
+Tecle Enter e digite sua senha. Caso sua senha não esteja cadastrada, use somente mysql -u root para acessar; futuramente mostraremos como cadastrar uma senha.
+
+Agora, para criar um novo usuário, precisamos informar o seu id e a senha de acesso; para este exemplo estaremos usando novousuario para o nome de usuário e a senha 123456, mas em cenários reais, procure usar senhas mais fortes, para garantir mais segurança.
+
+Com o acesso no MySQL feito corretamente, digite:
+
+CREATE USER 'novousuario'@'localhost' IDENTIFIED BY '123456';
+Note que o comando segue a seguinte sintaxe: CREATE USER '[nome do usuário]@'[nomedohost]' IDENTIFIED BY '[senha]';
+
+A seguir, é necessário conceder permissões ao novo usuário. Isso é feito com o seguinte comando:
+
+GRANT ALL PRIVILEGES ON * . * TO 'novousuario'@'localhost';
+Esse comando então tem a seguinte sintaxe: GRANT ALL PRIVILEGES ON [nomedobanco] . [nomedatabela] TO 'novousuario'@'localhost';
+
+Os asteriscos representam o banco e a tabela, respectivamente, e esse comando permite ao usuário executar todas as tarefas nas bases de dados e tabelas.
+
+Agora precisamos por essas permissões em vigor, com o comando:
+
+FLUSH PRIVILEGES;
+Caso seja necessário, também é possível apagar um usuário. Isso pode ser feito com o seguinte comando:
+
+DROP USER ‘novousuario’@‘localhost’;
+
+
+Para modificar a senha:
+
+Vamos aproveitar aqui o usuário que foi criado no passo anterior, novousuário, e vamos modificar a sua senha.
+
+Ainda dentro do MySQL, digite:
+
+ALTER USER 'novousuario'@'localhost' IDENTIFIED BY 'NovaSenha';
+A sintaxe desse comando é ALTER USER '[nome do usuário que se quer alterar]'@'[host]' IDENTIFIED BY '[valor da nova senha]';
+
+NovaSenha poderia ser qualquer senha de sua preferência, inclusive é recomendado o uso de senhas mais fortes para proteger suas alterações.
+
+Para testar, digite "Quit" e refaça o login com o usuário criado e a senha nova, fazendo:
+
+mysql -u novousuario -p
+O MySQL vai pedir a senha, ao digitar ele deve entrar no usuário.
+
+Esse comando pode ser usado também para cadastrar uma senha para 'root' caso este não tenha uma senha cadastrada.
+
+
+
+Problema #04: "Erro ERROR 2003 (HY000): Can't connect to MySQL server on 'localhost' (10061)"
+
+Solução: Instalar e/ou ativar o serviço do MySQL
+
+
+
+Para instalar os serviços do MySQL:
+
+Abra o Prompt de Comando e acesse a pasta bin do MySQL, fazendo:
+
+cd C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin
+
+OBS: MySQL Server 8.0 pode mudar dependendo da versão que você instalou.
+
+Uma vez dentro desse caminho, digite:
+
+mysqld --install
+
+3) Agora os serviços foram corretamente instalados.
+
+
+
+Para iniciar os serviços do MySQL:
+
+Você pode fazer pelo CMD usando:
+
+**mysql.server start**
+
+Ou diretamente pelo Gerenciador de Tarefas, seguindo o passo a passo:
+
+Abra o gerenciador de tarefas (Ctrl + Alt + Del -> Gerenciador de Tarefas ou pesquisando "Gerenciador de Tarefas");
+
+Vá na aba Serviços;
+
+Procure pelo serviço chamado MySQL, clique direito e "Iniciar".
+
+
+
+Caso ainda tenha alguma dúvida, ou se algum erro não foi coberto nessa aula artigo, não hesite, pode entre em contato com o suporte!
+
+
+
+Bons estudos!

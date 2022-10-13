@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Binding</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Canal</a></p>
+        <p><a v-bind:href="link">Canal</a></p> <!-- utilizando o "v-bind:href" isso vai fazer com que o link não fique codificado. -->
+        <!-- v-bind é uma diretrize do Vue-->
+        <!-- tambem pode ser usado dessa forma ":href" -->
+        <p><a :href="link">Canal</a></p>
+        <p> <!-- v-model -> faz uma mudança no input e no data que esta no Vue. -->
+            <!-- v-model ele faz atualização em duas ou até em mais.  -->
+            <!-- Modos de usar tambem. ":value -> não vai alterar os dois só que estiver no input." -->
+            <!-- Modo "v-bind:value -> a mesma coisa não vai alterar dois e sim só que estiver dentro do input."-->
+            <input type="text" v-model="nome"><br>
+            <span>{{ nome }}</span>
+        </p>
+    </div>
+    <script>
+        new Vue({ 
+            el: "#app", // el -> serve para linka com os elementos da pagina.
+            data: {
+                nome: "Douglas",
+                link: "https://www.youtube.com/channel/UCIW4y9tEpVmx_iezUVA9blQ"
+            },
+            watch: { // Faz uma atualização quando for mudado o nome ou oque seja.
+                nome(novoValor){
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+Comandos!
+
+Site: https://material.angular.io/
+
+Repositorio no GitHub -> https://github.com/cod3rcursos/angular-crud
+
+1 - No backend usar o Comando para criar o Json.-> npm init -y / npm i json-server .
+
+Obs: Shit + Alt + F -> Formata o arquivo deixa ele todo alinhado.
+
+2 - Comandos para instalar o Angula-9 -> npm i -g @angular/cli 
+
+3 - Para criar o projeto é -> ng new frontend. /" ng new frontend --minimal"
+
+4 - Quando for criador o projeto com nome de frontend use o npm start para ele fazer uma compilação tudo ok!
+
+5 - Instalar na parte do frontend o material do angular  que é temas de cores, quando for peguntadas na instalação.-> ng add @angular/material
+
+6 - Para criar o COMPONENT e já manda ele com o caminho que ele vai ser criado é -> ng g c components/template/header
+-> ng g s -> Criar um arquivo service.ts
+
+7 - ng add @angular/material -> adicionar os material.
+
+8 - Site para coloca icones em sites. https://material.io/design/iconography/system-icons.html#design-principles
+
+Para Criar novos components -< ng g c
+
+Para fazer uma tabala com aqueles comandos é -> ng generete @angular/material:table -> dizer para onde vai com o caminho.
+
+9 - Site para fazer com que o formulario se resete sozinho ou quando ele for salvo -> https://pt.linkedin.com/pulse/como-resetar-programaticamente-formul%C3%A1rios-angular-de-lisboa-alves
+
+ng g c component/product/product-delete -> criar e encaminha para uma pasta e criar os arquivos.
+
+Extensões -> AUTO IMPORT, ANGULAR-9
+/////////////////////////////////////
+
+Modules que tem que ser importados. 
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';

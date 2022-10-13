@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Diretiva Personalizada</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <input type="text" v-model="nome">
+        <div v-inverter="nome"></div>
+    </div>
+    <script> // Uma função que escreve ao contrario.
+        Vue.directive('inverter', { // Diretiva implementada.
+            componentUpdated(el, binding) { // Com o binding eu posso pega o valor que vai ser colocado no v-inverter
+                const invertido = binding.value.split('').reverse().join('') // split('') -> vai criar uma array.
+                // reverse() -> Vai inverter a array.
+                //join('') -> Vai juntar essa array.
+                el.innerHTML = invertido
+            }
+        })
+
+        new Vue({
+            el: "#app",
+            data: {
+                nome: ''
+            }
+        })
+    </script>
+</body>
+</html>

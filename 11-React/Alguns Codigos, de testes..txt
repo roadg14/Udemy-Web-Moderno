@@ -1,0 +1,15 @@
+import Mae from './componentes/Mae'
+import Pai from './componentes/Pai'
+import Filho from './componentes/Filho'
+
+ReactDOM.render(
+    <div>
+        <Mae nome="Aniele" sobrenome="Tavares"/>
+        {/* Como passar componentes filhos diretamente na tag Pai */}
+        <Pai nome="Douglas" sobrenome="Rodrigues" />
+
+        <Filho nome="Ellie" sobrenome="Tavares Rodrigues"/>
+        <Filho nome="Mike" sobrenome="Tavares Rodrigues"/>
+        <Filho nome="Maria Luiza" sobrenome="Tavares Rodrigues"/>
+    </div>
+, document.getElementById('root'))

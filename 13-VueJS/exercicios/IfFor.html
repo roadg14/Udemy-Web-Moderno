@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>If & For</title>
+    <link rel="stylesheet" href="/css/estilo.css">
+    <script src="/js/vue.min.js"></script>
+</head>
+<body class="exercicio">
+    <div id="app">
+        <!-- Fazendo acesso com o 'v-for' de um ate tanto assim -> "v-for="n in 5"" -->
+        <p v-for="(aluno, i) in alunos"> <!-- O "v-for é usado para renderizar uma lista de itens com base em um array." -->
+            {{i+1}}° {{aluno.nome}} - {{aluno.nota}} - 
+            <span v-if="aluno.nota >= 9">Quadro de Honra</span> <!-- "v-if" -> se a nota do aluno for maior que 9 Vai coloca o nome quadro de honra. -->
+            <span v-else-if="aluno.nota >= 7">Aprovados!</span> <!-- "v-else-if" -->
+            <span v-else-if="aluno.nota >= 3">Recuperação!</span>
+            <span v-else>Reprovada!</span> <!-- "v-else" -> senão  -->
+        </p>
+        <ul style="list-style: none;">
+            <li v-for="n in 8"> <!-- de um ate 5 -->
+                <span v-show="n >= 4">{{n}}</span> <!-- Se n for maior que 4 mostre! -->
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data: {
+                alunos: [
+                    { nome: "Guilherme", nota: 7.8 },
+                    { nome: "Aniele", nota: 9.1 },
+                    { nome: "Thiago", nota: 6.8 },
+                    { nome: "Debora", nota: 2.8 }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

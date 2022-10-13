@@ -1,0 +1,48 @@
+Criando Projeto com o Next.js - React - TailwindCSS - Firebase
+
+1 - npx create-next-app -> e o nome no projeto "next-crud".
+
+2 - Acessar os Sites -> TailwindCSS - Firebase
+
+3 - Criar um projeto no Firebase -> https://console.firebase.google.com/
+
+3 - instalar o tailwindcss - > npm install -D tailwindcss 'e' npx tailwindcss init -p
+Em caso de erros coloque esse comando -> npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+https://tailwindcss.com/docs/installation
+
+4 - npm install --save-dev @types/react @types/node typescript -> instalando tambem as dependencias de typescript.
+Em casa de erros coloque esse comando -> npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+5 - Criar um Arquivo com o nome -> tsconfig.json
+Quando for dado o comando npm run dev, vai ser configurado quando esse comando 
+
+6 - Para configurar o Firebase tem que ser instalado com o -> npm i firebase
+
+7 - Pega icones - https://heroicons.com/
+
+8 - No arquivo .env.local -> Aqueles linhas de codigo são tiradas do site onde voce tambem criou o projeto. As 3 primeiras linhas.
+
+
+https://tailwindcss.com/
+https://firebase.google.com/
+
+
+//////////////////////////////////////////////////////
+
+configuração do tailwindcss.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  purge: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}"
+  ],
+  darkMode: false,
+  theme: {
+    extend: {},
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
