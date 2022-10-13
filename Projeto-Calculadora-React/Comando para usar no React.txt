@@ -1,0 +1,11 @@
+npm i -g create-react-app -> Usando no terminal
+
+create-react-app exercicios -> Criar o projeto
+
+npx create-react-app exercicios
+
+Para da start no projeto é com o -> npm start
+
+///////
+
+Padrão do React é as letras em Maiusculos! 

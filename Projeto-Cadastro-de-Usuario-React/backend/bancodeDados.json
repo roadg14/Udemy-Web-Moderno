@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Douglas Rodrigues",
+      "email": "douglasgc13@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Aniele Tavares",
+      "email": "aniele28@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Debora Luiza",
+      "email": "deboraagata2022@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Guilherme Rodrigues",
+      "email": "guigc14@gmail.com"
+    },
+    {
+      "name": "Douglas Rodrigues2",
+      "email": "Nigga@viadodasilva.com",
+      "id": 5
+    },
+    {
+      "name": "Roberta",
+      "email": "123@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Roberto Femina",
+      "email": "lipe_equipe@yahoo.com.br",
+      "id": 7
+    },
+    {
+      "name": "Macumbeiro123",
+      "email": "douglasgc12@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Douglas Rodrigues",
+      "email": "douglasgc12@NiggaDasilva.com.br",
+      "id": 9
+    }
+  ]
+}

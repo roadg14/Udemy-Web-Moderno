@@ -1,0 +1,9 @@
+
+# Não leva o node modules para o GitHub. 
+
+# Dependencias.
+/node_modules
+
+
+# Produções.
+/build

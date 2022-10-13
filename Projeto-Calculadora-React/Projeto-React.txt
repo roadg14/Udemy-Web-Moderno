@@ -1,0 +1,10 @@
+Para Criar um projeto no React
+
+Primeiro - npm i -g create-react-app -> atualizar as dependencias.
+
+Segundo - create-react-app calculadora -> Por alterar o nome caso você queira muda alterando o nome que é depois do
+create-react-app.
+
+Terceiro - npm start -> isso vai da inicio ao servidor online.
+
+Quarto -  React usa sempre Letras maiusculas.

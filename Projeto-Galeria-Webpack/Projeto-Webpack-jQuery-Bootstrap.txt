@@ -1,0 +1,57 @@
+https://dicasdejavascript.com.br/como-criar-um-projeto-nodejs-com-npm/
+
+Para criar um package.jon, é com o comando npm init -> nisso voce vai dizer o nome e descrição do projeto.
+
+npm init -> pedi a descrição
+npm i -> vai fazer todas a instalação das dependencia que vai esta no devpendencias
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+Uma sugestão:
+
+Remova o node - sass de sua máquina
+
+npm uninstall node-sass
+Em seguida instale o sass ao invés do node - sass
+
+npm i -D sass
+Acredito que isso possa ajudar a resolver seu problema. Abraços!
+
+
+https://stackoverflow.com/questions/70281346/node-js-sass-version-7-0-0-is-incompatible-with-4-0-0-5-0-0-6-0-0 -> Desistalar.
+https://stackoverflow.com/questions/50499253/module-build-failed-error-sass-loader-requires-node-sass-4-please-insta -> Para instalar isso aqui.
+https://github.com/webpack-contrib/sass-loader/issues/563
+////////////////////////////////////////////////////////////////////
+{
+  "name": "projeto-galeria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "4.1.1",
+    "copy-webpack-plugin": "4.5.1",
+    "cross-env": "5.1.5",
+    "css-loader": "0.28.11",
+    "file-loader": "1.1.11",
+    "font-awesome": "4.7.0",
+    "jquery": "3.3.1",
+    "mini-css-extract-plugin": "0.4.0",
+    "node-sass": "^7.0.1",
+    "optimize-css-assets-webpack-plugin": "4.0.1",
+    "popper.js": "1.14.3",
+    "postcss-loader": "2.1.5",
+    "sass": "^1.53.0",
+    "sass-loader": "7.0.1",
+    "style-loader": "0.21.0",
+    "uglifyjs-webpack-plugin": "1.2.5",
+    "webpack": "4.8.3",
+    "webpack-cli": "2.1.3",
+    "webpack-dev-server": "3.1.4"
+  }
+}

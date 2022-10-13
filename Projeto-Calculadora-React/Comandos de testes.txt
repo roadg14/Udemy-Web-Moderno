@@ -1,0 +1,69 @@
+import React, { Component } from 'react' // Importando para o "Component".
+import './Calculator.css' // Referenciando já o CSS.
+import Button from '../componentes/Button'
+import Display from '../componentes/Display'
+
+
+export default class Calculator extends Component {
+
+    constructor(props) { // função para da aos buttons funcionamento. a cada click.
+        super(props)
+        this.clearMemory = this.clearMemory.bind(this)
+        this.setOperation = this.setOperation.bind(this)
+        this.setDigit = this.setDigit.bind(this)
+    }
+
+    clearMemory() { // Função de limpar os numeros digitados
+        console.log('limpar')
+    }
+
+    setOperation(operation) { // Função para setar os calculos para definir se é uma: SOMA, SUBTRAÇÃO, DIVISÃO, MULTIPLICAÇÃO,
+        console.log(operation)
+    }
+
+    setDigit(n){ // Adiciona o digito quando clicka.
+        console.log(n)
+    }
+
+    render() {
+        return (
+            <div className="calculator"> {/* Para se Referencia class no REACT eles usam assim-> className */}
+                <Display value={100}/>
+                <Button label="AC" click={this.clearMemory} triple/>
+                <Button label="/" click={this.setOperation} operation/>
+                <Button label="7" click={this.setDigit} />
+                <Button label="8" click={this.setDigit} />
+                <Button label="9" click={this.setDigit} />
+                <Button label="*" click={this.setOperation} operation />
+                <Button label="4" click={this.setDigit} />
+                <Button label="5" click={this.setDigit} />
+                <Button label="6" click={this.setDigit} />
+                <Button label="-" click={this.setOperation} operation />
+                <Button label="1" click={this.setDigit} />
+                <Button label="2" click={this.setDigit} />
+                <Button label="3" click={this.setDigit} />
+                <Button label="+" click={this.setOperation} operation />
+                <Button label="0" click={this.setDigit} double />
+                <Button label="." click={this.setDigit}/>
+                <Button label="=" click={this.setOperation} triple/>
+            </div>
+        )
+    }
+}
+
+
+
+
+// constructor(props) {
+//     super(props)
+//     this.clearMemory = this.clearMemory.bind(this)
+//     this.setOperation = this.setOperation.bind(this)
+//     this.addDigit = this.addDigit.bind(this)
+//     // This será resolvido para as funções
+//     // Bind retorna um objeto/função
+
+//     // ||
+//     // Recebendo valores e passando para as funções 
+//     // const addDigit = n => this.addDigit(n)
+//     // const setOperation = op => this.setOperation(op)
+// }

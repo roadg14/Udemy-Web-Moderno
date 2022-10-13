@@ -1,0 +1,15 @@
+Comandos 
+
+1 - sudo npm i -g @vue/cli / npm i -g @vue/cli -> instalação global dependencias do VueJS.
+
+2 - instalação da extensão - VETUR.
+
+3 - vue create calculator -> Criando a estrutura basica para o projeto.
+
+4 - npm run serve -> Para poder da start no servidor.
+
+5 - Utilizando o Ctrl + Space no App.vue -> vai carregar e ajuda a criar o Template.
+
+6 - Instalar tambem a biblioteca Vue -> vue add vuetify.
+
+Site - vuetify

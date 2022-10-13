@@ -1,0 +1,36 @@
+Para o BackEnd dando os comando que vamos utilizar.
+
+1 - npm init -y -> Criar o package.json que é as descrições sobre o projeto e dependencias
+
+2 - npm i -g create-react-app -> atualizar as dependencias.
+
+3 - npm i --save json-server@0.13.0 -E  -> Aplicando essa Dependencia para o package.json.
+
+4 - "test": "json-server --watch bancodeDados.json --port 8020" -> O --watch é para fica monitorando o arquivo que foi criado que é o "bancodeDados.json"
+e o --port é para aponta qual é a porta de servidor para o BackEnd.
+
+-----------------------------------------------------------------------
+
+Para criar o FrontEnd os comandos que vamos utilizar.
+
+1 - create-react-app frontend -> Vai criar a pasta frontend, tambemk faz as instalações de dependencias do react, react-dom entre outros.
+
+2 - "axios": "0.18.0", "bootstrap": "4.1.1", "font-awesome": "4.7.0", "react-router": "4.2.0", "react-router-dom": "4.2.2" -> Essas são as
+dependecias que são ser adicionadas.
+
+axios -> Ele é um cliene HTTP: que jaz webservice, vai ser utilizado chamadas via AJAX. tanto CONSULTAR ou ALTERAR.
+
+bootstrap ->
+
+font-awesome -> Que é uma blibioteca cheia de fontes de icones.
+
+react-router -> Utilizalo para navergar entre os componentes.
+
+react-router-dom -> tambem é necessario.
+
+Instalar uma dependecia que agora é necessario - npm install react-router-dom@6 -> No FrontEnd.
+temos tambem que importa ela no FrontEnd - import { Routes, Route } from "react-router-dom";
+
+Observação: Instalando o react-router-dom@6 ele geralmente não vai ter o "Routes" -> então vai ter que desistalar 
+esse react-router-dom@6 para o -> react-router-dom 
+https://www.codegrepper.com/code-examples/javascript/switch+is+not+exported+from+react-router-dom.
