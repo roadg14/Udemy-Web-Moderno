@@ -1,0 +1,29 @@
+Comandos!
+
+1 - Criando o Packjson.json -> npm init -y
+
+2 - Instalando a dependecia. -> npm i --save express
+
+3 - Instalando uma dependecia só para desenvolvimento -> npm i --save-dev nodemon
+
+4 - Para da start no index.js eu tambem posso chamar assim -> npm start / que a aplicação pelo nodemon vai iniciar.
+
+5 - Instalar o pm2 -> npm i --save pm2 
+
+6 - Com o pm2 voce pode startar varias aplicações 
+
+7 - "production": "pm2 start index.js --name appx-backend" -> essa vai ser aplicação quando for startada com pm2.
+para da start é -> npm run production
+isso vai roda o pm2.
+
+8 - Comandos do PM2. Site -> https://pm2.keymetrics.io/
+
+pm2 monit
+pm2 status
+pm2 show 0
+pm2 restart 0
+pm2 restart appx-backend
+pm2 stop 0
+pm2 kill
+
+9 - Instalando outra Dependencia -> npm i --save body-parser.

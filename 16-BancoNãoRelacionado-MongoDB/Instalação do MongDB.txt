@@ -1,0 +1,59 @@
+Duvidas - https://www.freecodecamp.org/portuguese/news/como-comecar-a-trabalhar-com-o-mongodb-em-10-minutos/#:~:text=Abra%20seu%20prompt%20de%20comando,iniciar%20o%20servidor%20do%20MongoDB. 
+
+
+1 - Site -> https://www.mongodb.com/
+
+2 - Fazer o Downloand - https://www.mongodb.com/try/download/community
+
+3 - Oque tem que ser baixado é o -> MongoDB Community Server.
+
+Assim que instalar, criar uma Pasta no Disco C: -> pasta com nome -> data / e outra pasta dentro de data -> db.
+
+C:\Program Files\MongoDB\Server\6.0\bin -> Mongod.exe
+
+/////////////////////////////////////////////////////////////
+
+Problemas nos comandos do Mongo
+Fala, Pessoal!
+
+Na aula seguinte (Comandos Básicos), alguns alunos têm relatado que o CMD não reconhece os comandos mongod e mongo. Sendo assim, criamos essa "aula tutorial" para te auxiliar caso você passe por esse problema.
+
+Primeiramente, é Importante garantir que você tenha criado as pastas "data/db". Para fazer isso, basta adicionar ao C: uma pasta chamada "data" e dentro dela uma chamada "db", pois é onde o Mongo adicionará os registros do seu banco de dados.
+
+1 - Acesse o dispositivo C: (ou qualquer outro que seja o principal);
+
+2 - Clique com o botão direito do mouse, vá até a sessão Novo e selecione Pasta;
+
+3 - Nomeie a pasta como "data";
+
+4 - Dentro dela, crie uma pasta chamada "db" usando o mesmo método.
+
+Precisamos também garantir que o comando mongo tenha sido adicionado nas variáveis de ambiente. Para fazer isso, basta:
+
+1 - Digitar Editar as variáveis de ambiente do sistema na sua barra de pesquisa do Windows;
+
+2 - Clicar na opção Variáveis de Ambiente;
+
+3 - Na caixa de baixo (Variáveis do sistema) você vai procurar a opção Path e selecionar;
+
+4 - Com a opção selecionada, clique em Editar;
+
+5 - Vai abrir outra aba. Caso você não veja o path do MongoDb nela, você vai clicar em Novo;
+
+6 - Agora é possível adicionar variáveis de ambiente no Path;
+
+7 - É necessário então colocar o caminho de instalação do Mongo (vai ser algo mais ou menos assim:
+
+C:\Program Files\MongoDB\Server\<número da versão>\bin
+substitua <número da versão> pela versão que está instalada na sua máquina; atualmente contamos com a versão 4.4 então ficaria algo assim:
+
+C:\Program Files\MongoDB\Server\4.4\bin
+8 - Clica em Ok;
+
+9 - Em seguida, feche todos os seus terminais que estão abertos;
+
+10 - Abra novamente e tente digitar mongod mais uma vez
+
+Assim, o Prompt de Comando deve agora reconhecer os comandos "mongo" e "mongod" e também salvar os arquivos corretamente.
+
+Bons estudos!
