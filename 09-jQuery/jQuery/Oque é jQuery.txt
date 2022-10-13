@@ -1,0 +1,6 @@
+O que é e para que serve o jQuery?
+
+
+O jQuery é uma biblioteca JavaScript que abre uma gama de funcionalidades ao seu site.
+Aprenda sobre os recursos disponíveis e como utilizá-lo. O principal objetivo do jQuery é facilitar o uso de JavaScript (JS) em seu site.
+Esta é a linguagem preferida dos desenvolvedores quando se trata de elaborar aplicações web.

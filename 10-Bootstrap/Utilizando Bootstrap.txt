@@ -1,0 +1,12 @@
+Site - https://getbootstrap.com/docs/4.0/getting-started/introduction/
+
+Nesse exercicio de bootstrap - como fazer uma navegação entre as paginas, 
+usando um servidor e usando AJAX -> uma formula no navegacao.js.
+
+
+BootStrap tem um sistema de grid com responsividade.
+
+Site com tampleits de bootstrap -> https://wrapbootstrap.com/
+
+Site com layout, alguns já com React -> https://www.creative-tim.com/
+

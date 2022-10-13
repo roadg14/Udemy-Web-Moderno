@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div id="segundo">Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>              
+        document.getElementById('primeiro').classList.add('destaque') // Como selecionar para fazer alguma coisa no javascript
+
+        const divs = document.getElementsByTagName('div') // Como pesquisar e fazer uma lista.
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque')) // Destacando todos.
+
+        // Agora usando pelo Class.
+
+        const ultimosElementos = document.getElementsByClassName('ultimo') // Desmarcando uma seleção.
+        for(let e of ultimosElementos) {
+            e.classList.remove('destaque')
+        }
+        
+
+
+        //document.getElementById('segundo').classList.add('destaque')
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+    <style>
+        input {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Eventos #01</h1>
+    <div id='posicao'></div>
+    <div id='cliques'>Cliques: 0</div>
+    <input type="text" placeholder="Cor de Background">
+
+    <script>
+        function mostraPosicaoMouse(e) {
+            $('#posicao').html(`x: ${e.clientX}`).append(`y: ${e.clientY}`)   
+        }
+
+        $('body').on('mousemove', mostraPosicaoMouse) // on -> registra evento.
+        // função passada como parâmetro | não precisa ser invocada.
+
+        $('#posicao').mouseover(e => { // mousemove não estará disponível sobre a div posicao
+            $('body').off('mousemove', mostraPosicaoMouse)
+        })
+
+        $('#posicao').mouseleave(e => { // mousemove volta a marca as posição de x e y. com essa função.
+            $('body').mousemove(mostraPosicaoMouse)
+        })
+
+        let cliques = 0 // Fazendo com que conte quantas vezes foi clicado.
+        $('body').click(e => { // Função a formular para fazer em jQuery como é feito para conta os click. 
+            $('#cliques').html(`Cliques: ${++cliques}`)
+        })
+
+        const backgroundOriginal = $('body').css('background-color')
+
+        $('input').keyup(function (e) { // o .keyup() já vem com o valor atualizado. // keyup -> valor atualiza sem atraso
+            const valor = $(this).val() // val() -> pegar valor via jQuery
+            if (valor.match(/#[\da-fA-F]{3,6}/)) { // Como configurar para pesquisar de backgound.
+                $('body').css('background-color', valor) 
+            } else {
+                $('body').css('background-color', backgroundOriginal)
+            }
+
+        })
+    </script>
+</body>

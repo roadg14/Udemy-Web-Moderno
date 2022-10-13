@@ -1,0 +1,31 @@
+
+* -> Tm tipo de seletor universal.
+
+elem -> Tambem que selecioa todo no caso só com a tag tipo: h1, header, body, selection.
+
+.class -> Utilização muito expecifica para selecionar ooque realmente vai mudar no CSS.
+
+#ID -> Ele pode ser utilizado para não só editar mais tambem como buscar e como um elementos para deixar todos iguais.
+
+[Atrib] -> Muito para personalizar, para quando voce não quiser fica utilizando muitas class.
+
+:Pseudo-Class -> Usa só dois pontos.
+
+::Pseudo-Elementos -> Usa quatro pontos.
+
+COMBINAR SELETORES.
+
+div + p = Adjacent Sibling
+
+div > p = Child
+
+div ~ p = General Sibling
+
+div p = Descendant
+
+developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity
+https://specificity.keegan.st/
+
+https://www.w3schools.com/colors/colors_hsl.asp
+https://coolors.co/
+http://paletton.com/

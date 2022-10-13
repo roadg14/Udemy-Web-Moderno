@@ -1,0 +1,4 @@
+npm i -g http-server - Para startar no terminal service.
+
+https://expressjs.com/pt-br/
+https://sailsjs.com/

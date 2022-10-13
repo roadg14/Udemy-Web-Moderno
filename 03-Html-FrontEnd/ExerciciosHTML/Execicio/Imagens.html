@@ -1,0 +1,108 @@
+<div wm-slider>
+<p>
+      <img src="./img/MuroAlto.jpg" alt="Muro alto" width="513" height="342" title="Muro da Cidade por Tarso Bessa">
+</p>
+
+<p>
+      <img src="./img/Luffy.gif" alt="Luffy" width="513" -title="Tempo" >
+</p>
+
+<p class="circula">
+      <img src="./img/XayahRakan.png" alt="Xayah & Rakan" height="342" width="513">
+</p>
+
+<p class="texto">
+      <img src="./img/Ellie.png" alt="Ellie" width="1300" height="700" aling="center"><br>
+      Ellie nasceu em algum momento de 2018-2019, com pai e mãe falecidos. 
+      Foi estudante de uma Escola Militar de Boston. Cresceu praticamente em uma zona de quarentena,
+      o que é um dos motivos pelo qual não sabe nada. Ellie não demonstra medo quanto aos perigos do novo mundo,
+      praticamente cresceu em meio ao caos.
+</p>
+
+<p class="cidade">
+
+</p>
+
+<p>
+      <picture>
+            <source srcset="./img/Ideiad.jpg" media="(min-width: 600px">
+            <img src="./img/Ideais.png" alt="">
+      </picture>
+</p>
+</div>
+
+<style>
+
+p{
+      position: absolute;
+      display: none;
+}
+
+.circula {
+      width: 513px;
+      background-color:brown;
+}
+
+.texto {
+      width: 400px;
+}
+
+.texto img {
+      margin-right: 10px;
+}
+
+.cidade {
+      width: 513px;
+      height: 342px;
+      background-image: url(./img/Cidade.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+}
+
+</style>
+
+<script> // Como fazer para ir passando como Slide.
+      function mover(elem, inicio, fim, passo, callback) {
+            const novoInicio = inicio - passo
+            if(novoInicio >= fim) {
+                  elem.style.left = novoInicio + 'px'
+                  setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+            }else {
+                  callback()
+            }
+      }
+      // Comandando para fazer Mover.
+      //const p = document.querySelector('[wm-slider] > p')
+      //p.style.display = 'block'
+      //mover(p, 1500, -520, 5, () => {
+      //      console.log('Terminou!!!')
+      //})
+
+      function slider(){
+            const elementos = document.querySelectorAll('[wm-slider] > p')
+            const slides = Array.from(elementos)
+            exibirSlide(slides, slides[0])
+      }
+
+      function exibirSlide(slides, slide) {
+            slide.style.display = 'block'
+
+            const inicio = innerWidth
+            const fim = -slide.clientWidth
+
+            slide.style.left = `${inicio}px`
+
+            mover(slide, inicio, fim, 5, () => {
+                  slide.style.display = 'none'
+                  exibirSlide(slides, getProximo(slides, slide))
+            })
+      }
+
+      function getProximo(lista, atual) {
+            const i = lista.indexOf(atual) +1
+            return i < lista.length ? lista[i] : lista [0]
+      }
+
+      slider()
+</script>

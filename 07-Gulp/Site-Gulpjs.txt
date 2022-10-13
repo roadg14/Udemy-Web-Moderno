@@ -1,0 +1,11 @@
+https://gulpjs.com/
+
+Comandos para instala o Gulp
+npm install gulp-cli -g
+npm install gulp -D
+npx -p touch nodetouch gulpfile.js
+gulp --help
+
+https://babeljs.io/ -> complicado de javascript para o futuro, quando ele ouver uma situação nova.
+
+http://javascriptlang.org/ -> site typescript.

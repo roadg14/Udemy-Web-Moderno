@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <script>              
+        document.querySelector('#primeiro').classList.add('destaque') // Utilizando o "a -> #" selecionar o ID no queryselector
+
+        const selecionar = seletor => // Como fazer uma seleção 
+            document.querySelectorAll(seletor).forEach(e => e.classList.add('destaque'))
+        const deselecionar = seletor =>
+            document.querySelectorAll(seletor).forEach(e => e.classList.remove('destaque'))
+
+            selecionar('div')
+            deselecionar('div')
+            selecionar('#primeiro')
+            deselecionar('*')
+            selecionar(':not(#primeiro)') // Modo de não seleciona uma só
+            deselecionar('*')
+            selecionar(':nth-child(1)')
+            deselecionar('*')
+            selecionar('div:nth-of-type(1)')
+            deselecionar('*')
+            selecionar('[wb-attrib]')
+
+
+    </script>
+</body>
+</html>

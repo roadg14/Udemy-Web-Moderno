@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Entendendo jQuery</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body class="conteudo exercicio">
+    <h1>Entendendo jQuery</h1>
+    <div>1</div>
+    <div>2</div>
+
+    <script>
+        $('div').hide(5000).show(5000).fadeOut(5000) // Isso é um seletor // Para chamar o jQuery só se fazer assim " $ , jQuery ".
+        // .hide é uma função para esconder os elementos. -> vai diminuindo
+        // .show é uma função que faz crescer se o .hiden vai diminuindo o .show vai crescendo.
+        // .fadeOut é uma função que faz o item Sumir, realmente a opacidade vai caindo ate somi da dela.
+        console.log($('div').get(0)) // Pegando primeiro elemento de lista de objetos.
+        // jQuery trabalha com objetos não diretamente da DOM.
+        console.log($.isEmptyObject({ nome: null })) // Modo de como saber se é um Objeto.
+        console.log(jQuery.inArray(3, [1, 2, 3])) // Modo de como saber qual a posição que esta a array.
+
+        $.fn.fundoAzul = function () { // Criando um plugin.
+            this.css('background-color', 'blue') // Criando uma cor para coloca no fundo e depois fazer ele sumir.
+            return this // Função retorna o próprio objeto.
+        }
+
+        $('body').fundoAzul().fadeOut(3000) // Chamando essas funções
+    </script>
+</body>

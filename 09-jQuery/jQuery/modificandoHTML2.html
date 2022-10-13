@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #02</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #02</h1>
+    <div id='div1'>1</div>
+    <div id='div2'>2</div>
+    <div id='div3'>3</div>
+    <p class='numero'>4</p>
+    <p class='numero'>5</p>
+
+    <script>
+        // Melhor forma.
+        $('#div1').append(', 2') // .append() -> Coloca no depois.
+        $('#div1').prepend('0, ') // .prepend() -> Coloca no inicio.
+
+        $('<span>, 3</span>').appendTo('#div1') // Para que funcione esses .appendTo() e .prependTo().
+        // Para funcionar precisa ser digitado ou com um <span> ou <div> "$('<span> Desse jeito </span>')".
+        $('<span>-1, </span>').prependTo('#div1') // Criando um elemento no inico ou no final.
+
+        $('#div2').before('<p>Antes 2</p>') // O ".before()" ele criar um paragrafo antes da div selecionada ou span. Paragrafo -> <p></p>.
+        $('#div2').after('<p>Depois  2</p>') // O ".after()" ele já criar um paragrafo depois da div selecionada ou span. Paragrafo -> <p></p>.
+
+        $('<p>Antes 3</p>').insertBefore('#div3') // O ".insertBefore()" Primeiro cria o elemento -> $('<p>Antes 3</p>')e depois informa o seletor -> ('#div3').
+        $('<p>Depois 3</p>').insertAfter('#div3') // O ".insertAfter()" Criar depois do seletor ->('#div3').
+
+        // $('p.numero').wrap('<div>') // Empacota elementos em uma div cada.
+        $('p.numero').wrapAll('<div id="div4">') // Envolve elementos numa única div. // div4 foi criada aqui.
+        $('#div4').empty() // ".empty()" Oque estava dentro é removido pela função empty.
+        $('#div3, #div4').prev().remove() // ".prev()" -> volta para o anterior que no caso é 'Depois 3' e 'Antes 3'.
+        // ".remove()" -> ele vai remover os anteriores, como vai retirer é por causa do .preve().remove() .
+
+        // Função replaceWith melhor forma.
+        // $('<div>Substituto</div>').replaceAll('body > p') // Qualquer paragrafo dentro de body será substituido.
+        // $('body > p').replaceWith('<div>Substituto</div>') // Melhor forma.
+        $('body > p').replaceWith(function () {
+            return $('<div>').html($(this).html()).append(' !!!') // Pegando conteudo do paragrafo e colocando dentro da div.
+        })
+    </script>
+</body>

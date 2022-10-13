@@ -1,0 +1,19 @@
+const porta = 3003 // Servidor essa é uma definição de porta.
+
+const express = require('express') // Como chamar o express
+const app = express()
+
+app.get('/produtos', (req, res, next) =>{ // Utilizando a mesma coisa do middleware.
+    console.log('Middleware 1...') // Aqui vai ser convertido em JSON.
+    next()
+})
+
+app.get('/produtos', (req, res, next) =>{ // Utilizando a mesma coisa do middleware.
+    res.send({ nome: 'Notebook', preco: 1.300}) // Aqui vai ser convertido em JSON.
+})
+
+app.listen(porta, () => { // Como chamar a porta de um servidor.
+    console.log(`Servidor executando na porta ${porta}.`) 
+})
+
+// Obs: Tem que ta funcionando no Terminal para roda na no Postman.

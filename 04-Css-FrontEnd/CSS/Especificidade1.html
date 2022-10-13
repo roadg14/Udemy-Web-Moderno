@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+        Em linhas Gerais...
+
+        1. regra com !important -> ele acabar dando mais importancia para que receber esse !important
+        2. Seletores mais espeficíficos
+        3. Último regra processada (empate)
+        */
+
+        p { /* Não tão espefico */
+            background-color: #aaa;
+        }
+
+        .observacao { /*Mais especifico que o p*/
+            background-color: aquamarine;
+            border: dashed 5px;
+            padding: 20px;
+            font-size: 40px;
+        }
+
+        p.observacao { /* E muito espeficifico que os dois (p, .observacao)*/
+            padding: 2px;
+            background: linear-gradient(to right, aquamarine, aqua);
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>

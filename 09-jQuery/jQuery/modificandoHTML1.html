@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #01</h1>
+    <div id='conteudo1'></div>
+    <div id='conteudo2'></div>
+    <div id='conteudo3'></div>
+    <div>Sem ID!</div>
+
+    <script>
+        // Conteudo 1
+        $('#conteudo1').append('<p>Douglas</p>') // Ele criar testos ".append()"
+
+        // Conteudo 2
+        const elementos = [ // Essa const elementos contém uma lista com o ".append()"
+            $('<li>').append('Thiago'), // Isso é um elemento sendo criado pelo jQuery. Seletor -> "$('')" Criando -> "$('<>')"
+            $('<li>').append('Guilherme'),
+            $('<li>').append('Douglas')
+        ]
+
+        const lista = $('<ul><li>Praia</li></ul>').append(elementos) // a const lista adiciona o conteudo que o "elementos" tem chamando assim ".append(elementos)".
+        $('#conteudo2').append(lista) // Chamando lista é agora é as duas listas usando ".append()".
+        // ".prepend()" faz com que o primeiro seja o ultimo.
+
+        // Conteudo 3
+        $('#conteudo3').append('<h1>1</h1>', '<h1>2</h1>').prepend('<h1>0</h1>') // O 0 foi para na frente do 1 e 2 por causa do ".prepend()".
+        $('#conteudo3').html('<h1>123</h1>') // ".html()" Ele substitui todos.
+        $('#conteudo3').text('<h1>123</h1>') // ".text()" vai coloca ate mesmo os h1 por que ele informa texto.
+
+        // Alterando todos
+        $('div[id]').html('<strong>Todos!</strong>') // Fez alteração em todos os conteudos por causa do "'[id]'.html()".
+        //Só muda quem tiver ID. sem isso não mudara nada.
+    </script>
+</body>

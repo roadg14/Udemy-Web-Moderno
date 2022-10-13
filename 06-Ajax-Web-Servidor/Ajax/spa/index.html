@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Mini SPA</title>
+    <link rel='stylesheet' href='../css/estilo.css'>
+    <style>
+        nav {
+            font-size: 2em;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #FFF;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+
+<body class="conteudo">
+    <nav>
+        <a href wm-link="series.html" wm-destino=".pagina">Séries</a> |
+        <a href wm-link="linguagens.html" wm-destino=".pagina">Linguagens</a>
+    </nav>
+    <div class="pagina"></div>
+    <script>
+        function navegarViaAjax (url, seletor, push = true) {
+            if(!url || !seletor) return // Fazendo uma verificação se não ouver url ou seletor não tem por que ir no servidor.
+            const elemento = document.querySelector(seletor)
+            fetch(url)
+            .then(resp => resp.text()) // Eu não estou com querendo usa o JSON, por que eu estou utilizando.
+            .then(html => {
+                elemento.innerHTML = html // Feita essa navegação.
+                if(push){ // Esse push tambem tem que esta na definição da function.
+                    history.pushState({ seletor }, null, url) // No caso essa linha de codigo vai fazer com que tenha um historico para voltar.
+                }
+            })
+        }
+
+        document.querySelectorAll('[wm-link]').forEach(link => {
+            const url = link.attributes['wm-link'].value
+            const seletorDestino = link.attributes['wm-destino'].value
+
+            // Cabiturando o click nos links.
+            link.onclick = e => { // Veja no site como ficou.
+                e.preventDefault()
+                navegarViaAjax(url, seletorDestino) // Não fica navegando por links e sim por servidor
+            }
+        })
+
+        window.onpopstate = e => { // Controle de condigo de navegação no historico, quando for clicada ele pode voltar nas setinhas.
+            if(e.state) {
+                navegarViaAjax(window.location.href, e.state.seletor, false)
+            }
+        }
+    </script>
+</body>

@@ -1,0 +1,13 @@
+Reposividade de tamanho. como se fazer
+
+@media (max-width: 600px) {
+            .muito-pequeno { display: block; }
+        }
+
+        @media (max-width: 1000px ), (orientation: portrait) { /* Orientation: portrait, landscape*/
+            .pequeno-retrato { display: block; }
+        }
+
+        @media (min-width: 500px) and (max-width: 1100px) {
+            .intervalo { display: block;}
+        }

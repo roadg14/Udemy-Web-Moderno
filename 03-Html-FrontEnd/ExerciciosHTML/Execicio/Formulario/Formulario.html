@@ -1,0 +1,80 @@
+<h1>Formulário</h1>
+
+<form method="POST">
+  
+      <input type="text" name="nome" placeholder="Nome">
+      <input type="password" name="senha" placeholder="Senha">
+      <textarea name="bio" cols="30" row="10" placeholder="Biografia"></textarea>
+  
+  <div>
+      <input type="radio" name="tipo" value="admin">Admin
+      <input type="radio" name="tipo" value="regular">Regular
+      <input type="radio" name="tipo" value="professor">Professor
+      <input type="radio" name="tipo" value="doente mental">Deficiente
+  </div>
+  <div>
+    <input type="checkbox" name="ativo">Ativo
+  </div>
+
+  <select name="estado" id="">
+      <option value="">Selecione</option>
+      <option value="Ac">Acre</option>
+      <option value="Al">Alagoas</option>
+      <option value="Ap">Amapá</option>
+      <option value="Am">Amazonas</option>
+      <option value="Ba">Bahia</option>
+      <option value="Ce">Ceará</option>
+      <option value="Df">Distrito Federal</option>
+      <option value="Es">Espírito Santo</option>
+      <option value="Go">Goiás</option>
+      <option value="Ma">Maranhão</option>
+      <option value="Mt">Mato Grosso</option>
+      <option value="Ms">Mato Grosso do Sul</option>
+      <option value="Mg">Minas Gerais</option>
+      <option value="Pa">Pará</option>
+      <option value="Pb">Paraíba</option>
+      <option value="Pr">Paraná</option>
+      <option value="Pe">Pernambuco</option>
+      <option value="Pi">Piauí</option>
+      <option value="Rj">Rio de Janeiro</option>
+      <option value="Rn">Natal</option>
+      <option value="Rs">Rio Grande do Sul</option>
+      <option value="Ro">Rondônia</option>
+      <option value="Rr">Roraima</option>
+      <option value="Sc">Santa Catarina</option>
+      <option value="Se">Sergipe</option>
+      <option value="To">Tocantins</option>
+      <option value="To">São Paulo</option>
+      <option value="Tr">Triângulo das Bermudas</option>
+  </select>
+
+  <button formaction="http://localhost:3003/usuarios" >Incluir</button>
+  <button formaction="http://localhost:3003/usuarios/alterados">Alterar</button>
+</form>
+
+<style>
+
+input, textarea, select {
+  display: block;
+  margin-bottom: 5px;
+}
+  
+input[type=radio] {
+  display: inline;
+}
+
+</style>
+
+
+
+<!-- Uma forma de fazer uma seleção de lista tambem.
+    <select name="interesses" multiple size="7">
+      <option value="Adm">Administração</opiton>
+      <option value="Adm">Administração</opiton>
+      <option value="Adm">Administração</opiton>
+      <option value="Adm">Administração</opiton>
+      <option value="Adm">Administração</opiton>
+    </select>
+  -->
+  <!--
+    <button formaction="http://localhost:3003/usuarios" formethod="GET">Incluir</button> -->

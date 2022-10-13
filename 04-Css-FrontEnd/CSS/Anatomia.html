@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        .selector {
+            color: brown;
+            font-size: 30px;
+            text-align: center;
+            /* Multiplos Valores*/
+            border: solid 5px navy;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /*Funções*/
+            width: (100% - 40px);
+            background-color: rgb(34,52,45);
+        }
+
+        /*Usando uma Pseudo-classe*/ 
+        .selector:hover {
+            background-color: orange;
+
+        }
+
+        /*Usando um Pseudo-Elemento*/
+        .selector::first-letter {
+            font-size: 40px;
+        }
+        /* Padrão de nomeclatura? */
+        /* dash-case ou camelcase */
+        /**/
+        /**/
+        /**/
+
+    </style>
+</head>
+
+<body>
+    <div class="selector">Conteúdo</div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+Download - https://jquery.com/
+Tambem pode de fazer pelos comandos - NPM - https://www.npmjs.com/package/jquery
+https://api.jquery.com/ -> as API's para quando não souber acessar algumas.

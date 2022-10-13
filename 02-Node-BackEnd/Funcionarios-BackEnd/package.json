@@ -1,0 +1,22 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "Projeto-Udemy",
+  "main": "Projeto-Package.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Douglas",
+    "Rodrigues",
+    "Ferreira",
+    "Campos"
+  ],
+  "author": "Douglas Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "~0.17.9"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #03</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+    <script src='js/jquery.js'></script>
+</head>
+
+<body class='conteudo exercicio'>
+    <h1>Modificando HTML #03</h1>
+    <div id='conteudo'></div>
+    <div id='conteudo1'></div>
+
+    <script>
+        // $(document).ready(function () { // Quando a DOM estiver pronta esta função for chamada
+            $(function () {
+            const alunos = [ // Isso é um objeto em JavaScript.
+                { nome: 'Ana', nota: 9.1 },
+                { nome: 'Bianca', nota: 8.4 },
+                { nome: 'Carlos', nota: 7.6 },
+                { nome: 'Julia', nota: 9.7 }
+            ]
+
+            const linhas = alunos.map(aluno => {
+                const tdNome = $('<td>').html(aluno.nome) // Substituindo conteúdo de td pelo nome
+                const tdNota = $('<td>').html(aluno.nota)
+                // return $('<tr>').append(tdNome).append(tdNota)
+                // return $('<tr>').append([tdNome, tdNota])
+                return $('<tr>').append(tdNome, tdNota) // Aqui é criando os elementos da DOM pelo jQuery.
+            })
+
+            const tabela = $('<table>').append(linhas)
+                .css('border', 'solid 5px')
+
+            $('#conteudo').append(tabela)
+        })
+        ////////////////////////////////////////// TESTANDO.
+        $(function () {
+            const nomes = [
+                { nome: 'Douglas', sobrenome: 'Rodrigues', idade: 25},
+                { nome: 'Thiago', sobrenome: 'Rodrigues', idade: 23 },
+                { nome: 'Guilheme', sobrenome: 'Rodrigues', idade: 17}
+            ]
+
+            const linhas = nomes.map(pessoas => {
+                const Nome = $('<td>').html(pessoas.nome)
+                const Sobrenome = $('<td>').html(pessoas.sobrenome)
+                const Idade = $('<td>').html(pessoas.idade)
+                return $('<tr>').append(Nome, Sobrenome, Idade)
+            })
+
+            const tabelaNomes = $('<tabela>').append(linhas)
+
+            $('#conteudo1').append(tabelaNomes)
+        })
+    </script>
+</body>

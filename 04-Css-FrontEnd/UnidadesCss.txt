@@ -1,0 +1,18 @@
+Unidades
+
+Absolutos
+.px -> Pixel
+.cm -> Centimetros
+.mm -> Metros
+
+Viewport
+.vh
+.vw
+.vmin -> é a menor dimensão 
+.vmax -> é a maior dimensão
+
+Viewport & Font -> no caso especial dois usam porcentagem %.
+
+Font
+.rem
+.em
