@@ -1,4 +1,5 @@
-const [a, b, c, d] = [ 3, 5, 7, 9]; //Aprendendo a fazer ações aritmeticas, tudo de novo kkkkkk.
+//Aprendendo a fazer ações aritmeticas, tudo de novo kkkkkk.
+const [a, b, c, d] = [ 3, 5, 7, 9];
 const soma = a + b + c - d;
 const subtracacao =  d - c;
 const multiplicacao = a * b;

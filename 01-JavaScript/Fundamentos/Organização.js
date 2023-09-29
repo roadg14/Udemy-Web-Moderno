@@ -1,3 +1,4 @@
+// Sentenças de codigos podem ter varias linhas.
 console.log("Sentenças de códigos");
 
 {
